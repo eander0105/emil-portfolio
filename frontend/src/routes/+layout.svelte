@@ -6,4 +6,8 @@
 </script>
 
 <DarkMode btnClass={darkmodebtn} />
+
+<!-- HEADER -->
+<div class="fixed top-2 z-50">test</div>
+
 <slot />
