@@ -9,5 +9,11 @@ pkgs.mkShell {
 
     # Frontend depedencies
     nodejs
+
+    # Database/backend dependencies
+    go
+    libcap
+    gcc
+
   ];
 }
