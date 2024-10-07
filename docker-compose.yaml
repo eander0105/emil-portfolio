@@ -13,14 +13,13 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
-  # db:
-  #   image: postgres:latest
-  #   environment:
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
-  #     - POSTGRES_DB=mydb
-  #   volumes:
-  #     - db-data:/var/lib/postgresql/data
-
-# volumes:
-  # db-data:
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+    volumes:
+      - ./db:/app
+    command: air -c .air.toml
