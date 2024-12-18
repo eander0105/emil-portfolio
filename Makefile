@@ -9,5 +9,6 @@ logs:
 
 restart:
 	@docker-compose restart
+	@docker-compose logs -f
 
-.PHONY: start stop logs
+.PHONY: start stop logs restart

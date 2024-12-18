@@ -3,13 +3,13 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./frontend
+      context: ./frontend-2
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - 5173:5173
     volumes:
-      - ./frontend:/app
+      - ./frontend-2:/app
     environment:
       - NODE_ENV=development
     command: npm run dev

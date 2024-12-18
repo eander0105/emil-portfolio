@@ -1,15 +1,14 @@
-const config = {
-	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
-	],
+import containerQueries from '@tailwindcss/container-queries';
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
 
-	theme: {
-		extend: {}
-	},
+export default {
+  content: ['./src/**/*.{html,js,svelte,ts}'],
 
-	plugins: [require('flowbite/plugin')],
-	darkMode: 'class'
-};
+  theme: {
+    extend: {}
+  },
 
-module.exports = config;
+  plugins: [typography, forms, containerQueries]
+} satisfies Config;
