@@ -1,9 +1,7 @@
-version: '3'
-
 services:
   frontend:
     build:
-      context: ./frontend-2
+      context: ./frontend
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
@@ -13,13 +11,21 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
-  db:
-    build:
-      context: ./db
-      dockerfile: Dockerfile
+  postgres:
+    image: postgres
     restart: unless-stopped
     ports:
-      - 8090:8090
-    volumes:
-      - ./db:/app
-    command: air -c .air.toml
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  # db:
+  #   build:
+  #     context: ./db
+  #     # dockerfile: Dockerfile
+  #   restart: unless-stopped
+  #   ports:
+  #     - 8090:8090
+  #   volumes:
+  #     - ./db:/app
+  #   command: air -c .air.toml
