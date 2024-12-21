@@ -1,6 +1,15 @@
 start:
 	@docker-compose up -d && docker-compose logs -f
 
+purge:
+	@docker-compose down --remove-orphans
+
+build:
+	@docker-compose build
+
+rebuild:
+	@docker-compose build --no-cache
+
 stop:
 	@docker-compose down
 
@@ -11,4 +20,4 @@ restart:
 	@docker-compose restart
 	@docker-compose logs -f
 
-.PHONY: start stop logs restart
+.PHONY: start stop logs restart rebuild purge build
