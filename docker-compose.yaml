@@ -23,15 +23,26 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
-  backend:
+  api:
     build:
-      context: ./backend
+      context: ./api
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - 8090:8090
+      - 3000:3000
     volumes:
-      - ./backend:/app
+      - ./api:/app
     command: air -c .air.toml
     depends_on:
       - postgres
+
+  nginx:
+    image: nginx:1-alpine
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - api
+      - frontend

@@ -18,8 +18,7 @@ func main() {
 	router.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		resp := Response{Message: "Hello, World!!"}
 		json.NewEncoder(w).Encode(resp)
-		log.Println("Hello, World!")
 	}).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8090", router))
+	log.Fatal(http.ListenAndServe(":3000", router))
 }
