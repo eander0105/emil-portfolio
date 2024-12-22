@@ -1,4 +1,5 @@
 services:
+
   frontend:
     build:
       context: ./frontend
@@ -11,6 +12,7 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
+
   postgres:
     image: postgres
     restart: unless-stopped
@@ -20,6 +22,7 @@ services:
       - POSTGRES_DB=emil-portfolio
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+
   backend:
     build:
       context: ./backend
@@ -30,13 +33,5 @@ services:
     volumes:
       - ./backend:/app
     command: air -c .air.toml
-  # db:
-  #   build:
-  #     context: ./db
-  #     # dockerfile: Dockerfile
-  #   restart: unless-stopped
-  #   ports:
-  #     - 8090:8090
-  #   volumes:
-  #     - ./db:/app
-  #   command: air -c .air.toml
+    depends_on:
+      - postgres
