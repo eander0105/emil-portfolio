@@ -16,9 +16,10 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		resp := Response{Message: "Hello, World!"}
+		resp := Response{Message: "Hello, World!!"}
 		json.NewEncoder(w).Encode(resp)
+		log.Println("Hello, World!")
 	}).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8090", router))
 }

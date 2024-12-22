@@ -17,6 +17,7 @@ services:
     ports:
       - 5432:5432
     environment:
+      - POSTGRES_DB=emil-portfolio
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
   backend:
@@ -25,7 +26,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - 8080:8080
+      - 8090:8090
     volumes:
       - ./backend:/app
     command: air -c .air.toml

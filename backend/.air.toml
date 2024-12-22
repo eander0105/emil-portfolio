@@ -1,17 +1,21 @@
-# Config file for Air
-[build]
-# Command to build the Go binary
-cmd = "go build -o ./tmp/main ."
-# Binary output path
-bin = "./tmp/main"
-# Command to run the built binary
-full_bin = "./tmp/main"
+# AIR.toml
+root = "."
+tmp_dir = "tmp"
 
-[dirs]
-# Watch directories for changes
-src = ["."]
-# Ignore these paths
-exclude = ["tmp", "vendor"]
+[build]
+cmd = "go build -o ./tmp/app/engine ./cmd/main/main.go"
+bin = "tmp/app"
+full_bin = "./tmp/app/engine http"
+
+log = "tmp/air.log"
+
+include_ext = ["go", "yaml", "tolm"]
+exclude_dir = ["tmp", "vendor"]
+
+delay = 500 # ms
 
 [log]
-level = "debug"
+time = true
+
+[misc]
+clean_on_exit = true
