@@ -1,0 +1,17 @@
+# Config file for Air
+[build]
+# Command to build the Go binary
+cmd = "go build -o ./tmp/main ."
+# Binary output path
+bin = "./tmp/main"
+# Command to run the built binary
+full_bin = "./tmp/main"
+
+[dirs]
+# Watch directories for changes
+src = ["."]
+# Ignore these paths
+exclude = ["tmp", "vendor"]
+
+[log]
+level = "debug"
