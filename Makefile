@@ -20,4 +20,7 @@ restart:
 	@docker-compose restart
 	@docker-compose logs -f
 
+postgres:
+	@docker exec -it emil-portfolio-postgres-1 psql -U postgres -W emil-portfolio
+
 .PHONY: start stop logs restart rebuild purge build
