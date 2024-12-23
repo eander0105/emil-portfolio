@@ -1,4 +1,4 @@
-module backend
+module emilandersson.se
 
 go 1.22.10
 

@@ -3,9 +3,9 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-cmd = "go build -o ./tmp/app/engine ./cmd/main/main.go"
+cmd = "go build -o ./tmp/engine ./cmd/main.go"
 bin = "tmp/app"
-full_bin = "./tmp/app/engine http"
+full_bin = "./tmp/engine http"
 
 log = "tmp/air.log"
 
