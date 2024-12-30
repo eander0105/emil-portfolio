@@ -1,12 +1,15 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '../components/Header.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Nav from '$c/nav/Nav.svelte';
+	import Footer from '$c/Footer.svelte';
 
 	let { children } = $props();
 </script>
 
-<Header />
+<!-- Header -->
+<Nav>
+
+</Nav>
 
 <main class="bg-zinc-900 text-white min-h-screen">
 	<div class="container mx-auto py-4">
