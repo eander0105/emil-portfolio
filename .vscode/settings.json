@@ -1,5 +1,5 @@
 {
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "on",
     "editor.renderWhitespace": "boundary",
     "editor.insertSpaces": false,
     "editor.tabSize": 4
