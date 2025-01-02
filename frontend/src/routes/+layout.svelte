@@ -9,11 +9,11 @@
 
 <!-- Header -->
 <Navbar>
-	<Navlink link="/">Home</Navlink>
-	<Navlink link="/about">About</Navlink>
-	<Navlink link="/projects">Projects</Navlink>
-	<Navlink link="/projects">Blog</Navlink>
-	<Navlink link="/resume">Resume</Navlink>
+	<Navlink label="Home" link="/" />
+	<Navlink label="About" link="/about" />
+	<Navlink label="Blog" link="/blog" />
+	<Navlink label="Projects" link="/projects" />
+	<Navlink label="Resume" link="/resume" />
 </Navbar>
 
 <main class="bg-zinc-900 text-white min-h-screen">
