@@ -3,14 +3,20 @@
 	let { children } = $props();
 </script>
 
-<nav class={'sticky top-0 flex flex-row justify-between bg-zinc-900 px-8 py-6 text-white'}>
-	<span>
-		<a href="/" class="text-xl font-bold">Emil Andersson</a>
-	</span>
+<nav class="sticky top-0 flex flex-row justify-between bg-zinc-900 px-4 pt-6 sm:py-6 text-white container mx-auto">
+	<!-- Name, subtitle & Image -->
+	<div class="flex flex-row items-center">
+		<!-- Image -->
+		<img src="https://github.com/eander0105.png" alt="Emil Andersson" class="h-20 w-20 rounded">
+		<div class="ml-4 flex flex-col">
+			<a href="/" class="text-3xl md:text-4xl font-bold">Emil Andersson</a>
+			<span class="text-md md:text-xl text-zinc-400">Developer with a few to many interests</span>
+		</div>
+	</div>
 
 	<!-- Burger menu -->
 	<button
-		class="group z-50 flex h-8 flex-col justify-evenly sm:hidden"
+		class="group z-50 flex h-8 flex-col justify-evenly my-auto sm:hidden"
 		aria-label="Toggle menu"
 		onclick={() => ($burgerOpen = !$burgerOpen)}
 	>
@@ -37,7 +43,7 @@
 	</button>
 
 	<div
-		class={'links absolute left-0 top-20 flex h-screen w-full flex-col p-5 transition-all duration-200 sm:static sm:left-auto sm:top-auto sm:h-auto sm:w-auto sm:flex-row sm:p-0 ' +
+		class={'links absolute left-0 top-28 flex h-screen w-full flex-col p-5 transition-all duration-200 sm:static sm:left-auto sm:top-auto sm:h-auto sm:w-auto sm:flex-row sm:p-0 ' +
 			($burgerOpen
 				? 'visible translate-y-0 bg-zinc-900 opacity-100 ease-in-out'
 				: 'invisible -translate-y-4 opacity-0 sm:visible sm:translate-y-0 sm:opacity-100')}
