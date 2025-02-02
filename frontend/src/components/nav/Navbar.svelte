@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { burgerOpen } from "$l/client/Navbar";
+	import { burgerOpen } from "$s/Navbar";
 	let { children } = $props();
 </script>
 

@@ -6,7 +6,7 @@
 	import { goto } from "$app/navigation";
 	import { page } from "$app/state";
 
-	import { burgerOpen } from "$l/client/Navbar";
+	import { burgerOpen } from "$s/Navbar";
 
 	let { label, link = "" } = $props();
 
