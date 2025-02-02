@@ -10,15 +10,6 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler",
-		"baseUrl": "./src",
-		"paths": {
-			"$components/*": ["lib/components/*"],
-			"$c/*": ["lib/components/*"],
-			"$state/*": ["lib/state/*"],
-			"$s/*": ["lib/state/*"],
-			"$server/*": ["lib/server/*"],
-			"$db/*": ["lib/server/db/*"]
-		}
 	}
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
