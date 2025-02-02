@@ -12,8 +12,12 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			$c: 'src/components',
-			$l: 'src/lib',
+			$c: 'src/lib/components',
+			$components: 'src/lib/components',
+			$s: 'src/lib/state',
+			$state: 'src/lib/state',
+			$server: 'src/lib/server',
+			$db: 'src/lib/server/db'
 		}
 	},
 	extensions: ['.svelte', '.svx']
