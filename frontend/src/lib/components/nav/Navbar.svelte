@@ -17,33 +17,7 @@
 		</div>
 	</div>
 
-	<!-- Burger menu -->
-	<button
-		class="group z-50 flex h-8 flex-col justify-evenly my-auto sm:hidden"
-		aria-label="Toggle menu"
-		onclick={() => ($burgerOpen = !$burgerOpen)}
-	>
-		<span
-			id="s1"
-			class={'translate h-0.5 w-8 rounded-xl bg-white ' +
-				($burgerOpen ? 'translate-y-[0.54rem] rotate-45' : '')}
-		>
-			&nbsp;
-		</span>
-		<span
-			id="s2"
-			class={'h-0.5 w-8 rounded-xl bg-white ' + ($burgerOpen ? 'scale-50 opacity-0' : '')}
-		>
-			&nbsp;
-		</span>
-		<span
-			id="s3"
-			class={'translate h-0.5 w-8 rounded-xl bg-white ' +
-				($burgerOpen ? '-translate-y-[0.54rem] -rotate-45' : '')}
-		>
-			&nbsp;
-		</span>
-	</button>
+	<BurgerMenu />
 
 	<!-- TODO: think about a better looking way to display links on smaller screens(phones) -->
 	<div
@@ -52,7 +26,6 @@
 				? 'visible translate-y-0 bg-zinc-900 opacity-100 ease-in-out'
 				: 'invisible -translate-y-4 opacity-0 sm:visible sm:translate-y-0 sm:opacity-100')}
 	>
-		<!-- <div class={"flex flex-row absolute sm:top-auto sm:left-0"}> -->
 		{@render children?.()}
 	</div>
 	<div class="border-zinc-200 border-t"></div>
