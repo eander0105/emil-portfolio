@@ -16,10 +16,12 @@
 	<Navlink label="Resume" link="/resume" />
 </Navbar>
 
+<!-- Main content -->
 <main class="bg-zinc-900 text-white min-h-screen">
 	<div class="container mx-auto px-4 sm:px-16">
 		{@render children()}
 	</div>
 </main>
 
+<!-- Footer -->
 <Footer />
