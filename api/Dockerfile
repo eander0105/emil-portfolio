@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine as BASE
+FROM golang:1.23-alpine as BASE
 
 # Install necessary tools and dependencies
 RUN apk update && apk upgrade && \
