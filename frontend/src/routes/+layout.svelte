@@ -17,7 +17,7 @@
 </Navbar>
 
 <!-- Main content -->
-<main class="bg-zinc-900 text-white min-h-screen">
+<main class="min-h-screen bg-zinc-900 text-white">
 	<div class="container mx-auto px-4 sm:px-16">
 		{@render children()}
 	</div>

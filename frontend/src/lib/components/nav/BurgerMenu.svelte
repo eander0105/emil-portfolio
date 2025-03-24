@@ -1,10 +1,10 @@
 <script>
-	import { burgerOpen } from "$s/Navbar";
+	import { burgerOpen } from '$s/Navbar';
 </script>
 
 <!-- Burger menu -->
 <button
-	class="group z-50 flex h-8 flex-col justify-evenly my-auto sm:hidden"
+	class="group z-50 my-auto flex h-8 flex-col justify-evenly sm:hidden"
 	aria-label="Toggle menu"
 	onclick={() => ($burgerOpen = !$burgerOpen)}
 >
