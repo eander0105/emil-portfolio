@@ -26,7 +26,7 @@ services:
   api:
     build:
       context: ./api
-      dockerfile: Dockerfile
+      target: dev
     restart: unless-stopped
     ports:
       - 3000:3000

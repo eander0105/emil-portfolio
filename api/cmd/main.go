@@ -18,4 +18,10 @@ func main() {
 		c.JSON(200, Healthcheck{Status: true})
 	})
 
+	err := router.Run(":3000")
+
+	if err != nil {
+		panic(err)
+	}
+
 }
