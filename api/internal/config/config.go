@@ -19,28 +19,32 @@ func LoadConfig() (Config, error) {
 	}
 
 	// Ensure values are set
-	if host := os.Getenv("DB_HOST"); host == "" {
+	host := os.Getenv("DB_HOST")
+	if host == "" {
 		return Config{}, fmt.Errorf("DB_HOST is not set")
 	}
 
-	if user := os.Getenv("DB_USER"); user == "" {
+	user := os.Getenv("DB_USER")
+	if user == "" {
 		return Config{}, fmt.Errorf("DB_USER is not set")
 	}
 
-	if password := os.Getenv("DB_PASSWORD"); password == "" {
+	password := os.Getenv("DB_PASSWORD")
+	if password == "" {
 		return Config{}, fmt.Errorf("DB_PASSWORD is not set")
 	}
 
-	if dbName := os.Getenv("DB_NAME"); dbName == "" {
+	dbName := os.Getenv("DB_NAME")
+	if dbName == "" {
 		return Config{}, fmt.Errorf("DB_NAME is not set")
 	}
 
 	return Config{
 		DB: types.DBConfig{
-			Host:     os.Getenv("DB_HOST"),
-			User:     os.Getenv("DB_USER"),
-			Password: os.Getenv("DB_PASSWORD"),
-			DBName:   os.Getenv("DB_NAME"),
+			Host:     host,
+			User:     user,
+			Password: password,
+			DBName:   dbName,
 			Port:     port,
 		},
 	}, nil
