@@ -20,7 +20,6 @@ func InitDB(config types.DBConfig) error {
 		config.DBName,
 		config.Port,
 	)
-	dsn = "host=postgres user=postgres password=postgres dbname=emil-portfolio port=5432 sslmode=disable"
 
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
