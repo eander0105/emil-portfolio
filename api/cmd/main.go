@@ -9,6 +9,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func setupRouter() *gin.Engine {
+	router := gin.Default()
+
+	// Register general routes
+	routes.RegisterGeneralRoutes(router)
+
+	return router
+}
+
 func main() {
 	// Load config
 	cfg, conf_err := config.LoadConfig()
@@ -23,10 +32,7 @@ func main() {
 		panic(db_err)
 	}
 
-	router := gin.Default()
-
-	// Register routes
-	routes.RegisterGeneralRoutes(router)
+	router := setupRouter()
 
 	// Start Server
 	err := router.Run(":3000")

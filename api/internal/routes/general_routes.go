@@ -16,4 +16,12 @@ func RegisterGeneralRoutes(router *gin.Engine) {
 			"message": "pong",
 		})
 	})
+
+	router.GET("/example/:name", func(c *gin.Context) {
+		name := c.Param("name")
+		age := c.Query("age")
+		c.JSON(200, gin.H{
+			"message": "Hello " + name + " " + age,
+		})
+	})
 }
