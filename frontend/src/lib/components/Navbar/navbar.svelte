@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { burgerOpen } from '$s/Navbar';
-	import BurgerMenu from './BurgerMenu.svelte';
+	import BurgerMenu from './navbar-burgermenu.svelte';
 	import Icon from '@iconify/svelte';
 
 	let { children } = $props();

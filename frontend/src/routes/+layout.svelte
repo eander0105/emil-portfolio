@@ -1,20 +1,19 @@
 <script lang="ts">
 	import '../app.css';
-	import Navbar from '$c/nav/Navbar.svelte';
-	import Navlink from '$c/nav/Navlink.svelte';
+	import * as Navbar from '$c/Navbar';
 	import Footer from '$c/Footer.svelte';
 
 	let { children } = $props();
 </script>
 
 <!-- Header -->
-<Navbar>
-	<Navlink label="Home" link="/" />
-	<Navlink label="About" link="/about" />
-	<Navlink label="Blog" link="/blog" />
-	<Navlink label="Projects" link="/projects" />
-	<Navlink label="Resume" link="/resume" />
-</Navbar>
+<Navbar.Root>
+	<Navbar.Link label="Home" link="/" />
+	<Navbar.Link label="About" link="/about" />
+	<Navbar.Link label="Blog" link="/blog" />
+	<Navbar.Link label="Projects" link="/projects" />
+	<Navbar.Link label="Resume" link="/resume" />
+</Navbar.Root>
 
 <!-- Main content -->
 <main class="min-h-screen bg-zinc-900 text-white">
