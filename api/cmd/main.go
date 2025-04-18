@@ -5,7 +5,6 @@ import (
 
 	"github.com/eander0105/emil-portfolio/api/internal/config"
 	"github.com/eander0105/emil-portfolio/api/internal/db"
-	. "github.com/eander0105/emil-portfolio/api/internal/models"
 	"github.com/eander0105/emil-portfolio/api/internal/routes"
 	"github.com/gin-gonic/gin"
 )
@@ -19,33 +18,6 @@ func setupRouter() *gin.Engine {
 	return router
 }
 
-func migrate() {
-	cfg, err := config.LoadConfig()
-
-	if err != nil {
-		panic(err)
-	}
-
-	// Initialize database
-	if db_err := db.InitDB(cfg.DB); db_err != nil {
-		panic(db_err)
-	}
-
-	db.DB.AutoMigrate(
-		// text.go
-		&Translation{},
-		&Category{},
-
-		// project.go
-		&Project{},
-
-		// blog.go
-		&BlogPost{},
-	)
-
-	log.Println("Migration complete")
-}
-
 func main() {
 	// Load config
 	cfg, conf_err := config.LoadConfig()
@@ -54,9 +26,6 @@ func main() {
 	}
 
 	log.Println(cfg)
-
-	// Run mrigration
-	migrate()
 
 	// Initialize database
 	if db_err := db.InitDB(cfg.DB); db_err != nil {

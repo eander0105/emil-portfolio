@@ -2,7 +2,7 @@ package crud
 
 import (
 	"github.com/eander0105/emil-portfolio/api/internal/db"
-	"github.com/eander0105/emil-portfolio/api/internal/models"
+	"github.com/eander0105/emil-portfolio/api/internal/db/models"
 )
 
 func GetAllProjects() ([]models.Project, error) {

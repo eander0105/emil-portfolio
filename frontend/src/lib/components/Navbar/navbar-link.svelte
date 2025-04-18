@@ -19,7 +19,7 @@
 
 <a
 	href={link}
-	class={'transistion-all px-3 py-2 duration-100 hover:bg-zinc-800 sm:my-auto sm:rounded ' +
+	class={'transistion-all px-3 py-2 duration-100 sm:my-auto sm:rounded ' +
 		(page.url.pathname === link ? 'underline' : '')}
 	onclick={navigate}
 >
