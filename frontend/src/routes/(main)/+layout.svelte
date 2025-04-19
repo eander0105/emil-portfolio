@@ -1,14 +1,10 @@
 <script lang="ts">
-	import '../../app.css';
-	import { ModeWatcher } from 'mode-watcher';
 	import * as Navbar from '$c/Navbar';
 	import Footer from '$c/Footer.svelte';
 	import DarkmodeToggle from '$c/DarkmodeToggle.svelte';
 
 	let { children } = $props();
 </script>
-
-<ModeWatcher defaultMode={"dark"}/>
 
 <!-- Header -->
 <Navbar.Root>
