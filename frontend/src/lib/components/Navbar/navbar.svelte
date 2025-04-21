@@ -36,9 +36,6 @@
 </nav>
 
 <style>
-	.max-w {
-		max-width: 1000px;
-	}
 	span {
 		transition: all 0.1s;
 		-webkit-transform-origin: center center;
