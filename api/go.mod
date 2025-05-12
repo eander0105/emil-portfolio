@@ -1,4 +1,4 @@
-module github.com/eander0105/emil-portfolio/api
+module emil-portfolio
 
 go 1.23.0
 

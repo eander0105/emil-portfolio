@@ -3,7 +3,7 @@ package db
 import (
 	"log"
 
-	. "github.com/eander0105/emil-portfolio/api/internal/db/models"
+	. "emil-portfolio/internal/db/models"
 )
 
 func migrate() {

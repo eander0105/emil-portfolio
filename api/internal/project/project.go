@@ -1,8 +1,8 @@
 package project
 
 import (
-	"github.com/eander0105/emil-portfolio/api/internal/db"
-	"github.com/eander0105/emil-portfolio/api/internal/db/models"
+	"emil-portfolio/internal/db"
+	"emil-portfolio/internal/db/models"
 )
 
 func GetAllProjects() ([]models.Project, error) {

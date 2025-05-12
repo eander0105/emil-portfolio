@@ -1,7 +1,8 @@
 package server
 
 import (
-	"github.com/eander0105/emil-portfolio/api/internal/auth"
+	"emil-portfolio/internal/auth"
+
 	"github.com/gin-gonic/gin"
 )
 

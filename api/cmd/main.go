@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/eander0105/emil-portfolio/api/internal/db"
-	"github.com/eander0105/emil-portfolio/api/internal/server"
+	"emil-portfolio/internal/db"
+	"emil-portfolio/internal/server"
 )
 
 func main() {
