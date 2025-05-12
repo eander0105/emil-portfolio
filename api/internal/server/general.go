@@ -1,4 +1,4 @@
-package general
+package server
 
 import "github.com/gin-gonic/gin"
 
@@ -6,7 +6,7 @@ type Healthcheck struct {
 	Status bool `json:"status"`
 }
 
-func RegisterGeneralRoutes(router *gin.Engine) {
+func registerGeneralRoutes(router *gin.Engine) {
 	router.GET("/healthcheck", func(c *gin.Context) {
 		c.JSON(200, Healthcheck{Status: true})
 	})
@@ -17,6 +17,7 @@ func RegisterGeneralRoutes(router *gin.Engine) {
 		})
 	})
 
+	// Random test endpoint
 	router.GET("/example/:name", func(c *gin.Context) {
 		name := c.Param("name")
 		age := c.Query("age")

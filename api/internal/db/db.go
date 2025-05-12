@@ -9,8 +9,15 @@ import (
 
 var DB *gorm.DB
 
-func InitDB(config DBConfig) error {
+func InitDB() error {
 	var err error
+
+	config, error := loadDBConfig()
+
+	if error != nil {
+		return error
+	}
+
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%d sslmode=disable",
 		config.Host,

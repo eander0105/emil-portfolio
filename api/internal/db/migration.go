@@ -7,14 +7,8 @@ import (
 )
 
 func migrate() {
-	cfg, err := loadConfig()
-
-	if err != nil {
-		panic(err)
-	}
-
 	// Initialize database
-	if db_err := InitDB(cfg.DB); db_err != nil {
+	if db_err := InitDB(); db_err != nil {
 		panic(db_err)
 	}
 

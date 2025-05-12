@@ -1,38 +1,17 @@
 package main
 
 import (
-	"log"
-
-	"github.com/eander0105/emil-portfolio/api/internal/config"
 	"github.com/eander0105/emil-portfolio/api/internal/db"
-	"github.com/eander0105/emil-portfolio/api/internal/routes"
-	"github.com/gin-gonic/gin"
+	"github.com/eander0105/emil-portfolio/api/internal/server"
 )
 
-func setupRouter() *gin.Engine {
-	router := gin.Default()
-
-	// Register general routes
-	routes.RegisterGeneralRoutes(router)
-
-	return router
-}
-
 func main() {
-	// Load config
-	cfg, conf_err := config.LoadConfig()
-	if conf_err != nil {
-		panic(conf_err)
-	}
-
-	log.Println(cfg)
-
 	// Initialize database
-	if db_err := db.InitDB(cfg.DB); db_err != nil {
+	if db_err := db.InitDB(); db_err != nil {
 		panic(db_err)
 	}
 
-	router := setupRouter()
+	router := server.SetupRouter()
 
 	// Start Server
 	err := router.Run(":3000")
