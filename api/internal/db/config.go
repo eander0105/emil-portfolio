@@ -1,18 +1,16 @@
-package config
+package db
 
 import (
 	"fmt"
 	"os"
 	"strconv"
-
-	"github.com/eander0105/emil-portfolio/api/internal/types"
 )
 
 type Config struct {
-	DB types.DBConfig
+	DB DBConfig
 }
 
-func LoadConfig() (Config, error) {
+func loadConfig() (Config, error) {
 	port, err := strconv.Atoi(os.Getenv("DB_PORT"))
 	if err != nil {
 		return Config{}, err
@@ -40,7 +38,7 @@ func LoadConfig() (Config, error) {
 	}
 
 	return Config{
-		DB: types.DBConfig{
+		DB: DBConfig{
 			Host:     host,
 			User:     user,
 			Password: password,

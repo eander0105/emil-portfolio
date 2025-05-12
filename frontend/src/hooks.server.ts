@@ -14,7 +14,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 				// Allow access to the login page
 				return resolve(event);
 			}
-	
+
 			return new Response(null, {
 				status: 302,
 				headers: { Location: '/admin/login' }

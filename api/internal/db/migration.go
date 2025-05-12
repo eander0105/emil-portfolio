@@ -3,12 +3,11 @@ package db
 import (
 	"log"
 
-	"github.com/eander0105/emil-portfolio/api/internal/config"
 	. "github.com/eander0105/emil-portfolio/api/internal/db/models"
 )
 
 func migrate() {
-	cfg, err := config.LoadConfig()
+	cfg, err := loadConfig()
 
 	if err != nil {
 		panic(err)

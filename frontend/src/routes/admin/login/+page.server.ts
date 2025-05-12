@@ -11,7 +11,6 @@ export const load: PageServerLoad = async () => {
 
 export const actions: Actions = {
 	default: async (event) => {
-		// Handle login
 		
 	}
 }

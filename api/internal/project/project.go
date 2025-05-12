@@ -1,4 +1,4 @@
-package crud
+package project
 
 import (
 	"github.com/eander0105/emil-portfolio/api/internal/db"

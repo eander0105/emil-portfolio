@@ -3,14 +3,13 @@ package db
 import (
 	"fmt"
 
-	"github.com/eander0105/emil-portfolio/api/internal/types"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
 
-func InitDB(config types.DBConfig) error {
+func InitDB(config DBConfig) error {
 	var err error
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%d sslmode=disable",
