@@ -1,5 +1,5 @@
 # Development stage
-FROM node:18-alpine AS dev
+FROM node:24-alpine AS dev
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ ENV HOST=0.0.0.0
 CMD ["npm", "run", "dev"]
 
 # Build stage
-FROM node:18-alpine AS build
+FROM node:24-alpine AS build
 
 WORKDIR /app
 

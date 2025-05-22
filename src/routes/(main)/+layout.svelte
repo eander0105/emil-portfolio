@@ -16,8 +16,6 @@
 	<Navbar.Link label="Resume" link="/resume" />
 </Navbar.Root>
 
-<!-- <DarkmodeToggle /> -->
-
 <!-- Main content -->
 <main class="min-h-screen">
 	<div class="container mx-auto px-4 sm:px-16">

@@ -2,13 +2,13 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: .
       target: dev
     restart: unless-stopped
     ports:
-      - 5173:5173
+      - 80:5173
     volumes:
-      - ./frontend:/app
+      - ./:/app
     environment:
       - NODE_ENV=development
     command: npm run dev
@@ -22,33 +22,3 @@ services:
       - POSTGRES_DB=emil-portfolio
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-
-  api:
-    build:
-      context: ./api
-      target: dev
-    restart: unless-stopped
-    ports:
-      - 3000:3000
-    environment:
-      - DB_HOST=postgres
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
-      - DB_NAME=emil-portfolio
-      - DB_PORT=5432
-    volumes:
-      - ./api:/app
-    command: air -c .air.toml
-    depends_on:
-      - postgres
-
-  nginx:
-    image: nginx:1.19-alpine
-    restart: unless-stopped
-    ports:
-      - 80:80
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - api
-      - frontend
