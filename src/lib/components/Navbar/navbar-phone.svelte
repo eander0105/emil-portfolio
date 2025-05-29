@@ -17,7 +17,7 @@
 	<Sheet.Content side="right" class="flex flex-col h-full justify-between">
 		<Sheet.Header class="text-left">
 			<Sheet.Title>
-				Emil Andersson
+				<span class="text-xl">Emil Andersson</span>
 			</Sheet.Title>
 			<Sheet.Description>
 				Software developer
