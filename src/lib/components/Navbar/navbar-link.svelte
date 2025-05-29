@@ -1,19 +1,16 @@
 <!-- 
  TODO: add functionality to add sub links
- TODO: show current active link (and expand if sub links)
+ TODO: better SEO for links
 -->
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-
-	import { burgerOpen } from '$s/Navbar';
 
 	let { label, link = '' } = $props();
 
 	const navigate = (e: any) => {
 		e.preventDefault();
 		goto(link);
-		$burgerOpen = !$burgerOpen;
 	};
 </script>
 
