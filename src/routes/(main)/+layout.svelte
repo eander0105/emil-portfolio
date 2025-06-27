@@ -1,7 +1,5 @@
 <script lang="ts">
 	import * as Navbar from '$c/Navbar';
-	import Footer from '$c/Footer.svelte';
-	import DarkmodeToggle from '$c/DarkmodeToggle.svelte';
 
 	let { children } = $props();
 </script>
@@ -22,6 +20,3 @@
 		{@render children()}
 	</div>
 </main>
-
-<!-- Footer -->
-<Footer />
