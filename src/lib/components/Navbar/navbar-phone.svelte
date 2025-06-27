@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { Menu } from '@lucide/svelte'
-	import { Separator } from '$c/ui/separator';
-	import { Button } from '$c/ui/button'
-	import * as Sheet from '$c/ui/sheet'
+	import { Separator } from '$components/ui/separator';
+	import { Button } from '$components/ui/button'
+	import * as Sheet from '$components/ui/sheet'
 
 	let { children } = $props();
 </script>

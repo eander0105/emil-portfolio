@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as Navbar from '$c/Navbar';
+	import * as Navbar from '$components/Navbar';
 
 	let { children } = $props();
 </script>
