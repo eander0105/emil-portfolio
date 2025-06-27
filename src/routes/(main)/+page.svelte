@@ -1,6 +1,5 @@
 <script lang="ts">
 	import * as Card from '$components/ui/card';
-
 </script>
 
 <h1 class="text-3xl">Welcome to my office!</h1>

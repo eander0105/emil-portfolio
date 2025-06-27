@@ -1,7 +1,4 @@
-import Root from "./navbar.svelte";
-import Link from "./navbar-link.svelte";
+import Root from './navbar.svelte';
+import Link from './navbar-link.svelte';
 
-export {
-	Root,
-	Link,
-};
+export { Root, Link };

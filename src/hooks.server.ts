@@ -17,14 +17,14 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 			return new Response(null, {
 				status: 302,
-				headers: { Location: '/admin/login' }
+				headers: { Location: '/admin/login' },
 			});
 		}
 
 		if (pathname === '/admin/login') {
 			return new Response(null, {
 				status: 302,
-				headers: { Location: '/admin' }
+				headers: { Location: '/admin' },
 			});
 		}
 	}

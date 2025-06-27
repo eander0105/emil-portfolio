@@ -1,31 +1,24 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
-	import * as Form from '$lib/components/ui/form'
+	import * as Form from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
 
-	import {
-		type Infer,
-		type SuperValidated,
-		superForm
-	} from 'sveltekit-superforms';
-	import {
-		type LoginSchema,
-		loginSchema
-	} from './schema'
+	import { type Infer, type SuperValidated, superForm } from 'sveltekit-superforms';
+	import { type LoginSchema, loginSchema } from './schema';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 
 	let { data }: { data: { form: SuperValidated<Infer<LoginSchema>> } } = $props();
 
 	const form = superForm(data.form, {
 		validators: zodClient(loginSchema),
-	})
+	});
 
 	const { form: formData, enhance } = form;
 </script>
 
 <div class="h-dvh">
-	<Card.Root class="my-8 mx-4 md:mx-auto md:w-[400px]">
+	<Card.Root class="mx-4 my-8 md:mx-auto md:w-[400px]">
 		<Card.Header>
 			<Card.Title class="text-center">Admin login</Card.Title>
 		</Card.Header>
