@@ -1,22 +1,31 @@
 # TODO
 
+## Infrastructure
+
+- [ ] Production docker image
+- [ ] SSL
+  - [ ] Reasearch how to do this
+- [ ] Change to using deno instead of node
+
 ## Features
 
 - [ ] Landing page
-  - [ ] TBA
+  - [ ] TBD
 - [ ] Blog
   - [ ] DB schema
   - [ ] Markdown parser
   - [ ] Edit interface (admin?)
 - [ ] Photography page
   - [ ] Solve image storage (in drive/db to begin with?)
+  - [ ] Rescale images to different sizes
 - [ ] About page
 - [ ] Resume (downloadble PDF)
-- [ ] Production image
+- [ ] Auth using GitHub OAuth
+  - [ ] Only autherized users (only me) can sign in/register
 
 ## Bugs
 
-- [ ] TBA
+- [ ] None xdd
 
 ## Improvements
 
