@@ -12,6 +12,7 @@
   - [ ] Solve image storage (in drive/db to begin with?)
 - [ ] About page
 - [ ] Resume (downloadble PDF)
+- [ ] Production image
 
 ## Bugs
 

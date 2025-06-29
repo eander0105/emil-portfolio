@@ -23,3 +23,5 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+
+# TODO: Run/production stage
