@@ -9,6 +9,8 @@
 
 ## Features
 
+- [ ] Setup database
+  - [ ] Use Drizzle
 - [ ] Landing page
   - [ ] TBD
 - [ ] Blog

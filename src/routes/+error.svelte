@@ -3,4 +3,4 @@
 </script>
 
 <h1>Oj då..</h1>
-<h2>{page.status} - {page.error?.message || ''}</h2>
+<h2>{page.status} - {page.error.message || ''}</h2>

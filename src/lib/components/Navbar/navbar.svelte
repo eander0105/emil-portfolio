@@ -30,13 +30,3 @@
 		</div>
 	</nav>
 </header>
-
-<style>
-	span {
-		transition: all 0.1s;
-		-webkit-transform-origin: center center;
-		-moz-transform-origin: center center;
-		-o-transform-origin: center center;
-		transform-origin: center center;
-	}
-</style>
