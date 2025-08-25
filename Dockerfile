@@ -24,4 +24,4 @@ COPY . .
 
 RUN npm run build
 
-# TODO: Run/production stage
+# TODO: Run/production image stage
