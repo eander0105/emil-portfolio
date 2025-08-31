@@ -1,9 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-export default defineConfig(({command}) => {
+export default defineConfig(({ command }) => {
 	const production = command === 'build';
-	
+
 	// Allow *.emilandersson.se during development
 	const allowedHosts = production ? ['emilandersson.se'] : ['.emilandersson.se'];
 
