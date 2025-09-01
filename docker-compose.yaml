@@ -10,9 +10,8 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - HOST=0.0.0.0
+    env_file:
+      - .env
     command: npm run dev
 
   postgres:
@@ -20,7 +19,5 @@ services:
     restart: unless-stopped
     ports:
       - 5432:5432
-    environment:
-      - POSTGRES_DB=emil-portfolio
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env.db
