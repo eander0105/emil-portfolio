@@ -30,7 +30,7 @@
 				<!-- Wrapper need for some reason -->
 				<Separator />
 
-				<div class="flex w-full flex-row justify-around pt-6">
+				<div class="flex text-sm w-full flex-row justify-around pt-6">
 					<a
 						class="flex flex-row"
 						href="https://github.com/eander0105"

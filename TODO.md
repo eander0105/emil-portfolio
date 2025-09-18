@@ -3,8 +3,6 @@
 ## Infrastructure
 
 - [ ] Production docker image
-- [ ] SSL
-  - [ ] Reasearch how to do this
 - [ ] Change to using deno instead of node
 
 ## Features

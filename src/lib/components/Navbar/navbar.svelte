@@ -5,12 +5,12 @@
 </script>
 
 <header class="sticky top-0 z-50 bg-background">
-	<nav class="mx-auto flex flex-row justify-between border-b px-4 py-4 md:pb-4 max-w-[1680px]">
+	<nav class="mx-auto flex flex-row justify-between border-b px-4 py-6 md:py-4 md:pb-4 max-w-[1680px]">
 		<!-- Header - Name, subtitle & Image -->
 		<div class="h- z-40 flex flex-row items-center">
 			<img src="/profile.jpeg" alt="Emil Andersson" class="h-16 w-16 rounded sm:h-20 sm:w-20" />
 			<div class="ml-4 flex flex-col">
-				<a href="/" class="text-3xl font-bold md:text-4xl">Emil Andersson</a>
+				<a href="/" class="text-2xl font-bold md:text-4xl">Emil Andersson</a>
 				<!-- TODO: select and style a nice subtitle -->
 				<!-- <span class="text-md md:text-xl text-zinc-400">Developer with a few to many interests</span> -->
 				<span class="text-md text-muted-foreground md:text-xl">Software developer</span>

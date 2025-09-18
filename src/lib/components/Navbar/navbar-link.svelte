@@ -16,7 +16,7 @@
 
 <a
 	href={link}
-	class={'transistion-all px-3 py-2 duration-100 sm:my-auto sm:rounded ' +
+	class={'transistion-all text-base px-3 py-2 duration-100 sm:my-auto sm:rounded ' +
 		(page.url.pathname === link ? 'underline' : '')}
 	onclick={navigate}
 >
