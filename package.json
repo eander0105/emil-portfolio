@@ -7,13 +7,10 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-
 		"db:push": "drizzle-kit push",
 		"db:migrate": "drizzle-kit migrate",
 		"db:seed": "tsx ./src/lib/server/db/seed.ts",
@@ -26,6 +23,8 @@
 		"@iconify/json": "^2.2.304",
 		"@iconify/svelte": "^4.2.0",
 		"@lucide/svelte": "^0.482.0",
+		"@oslojs/crypto": "^1.0.1",
+		"@oslojs/encoding": "^1.1.0",
 		"@sinclair/typebox": "^0.34.40",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.9.0",
