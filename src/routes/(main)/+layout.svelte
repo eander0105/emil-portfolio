@@ -10,8 +10,8 @@
 	<Navbar.Link label="Blog" link="/blog" />
 	<Navbar.Link label="Projects" link="/projects" />
 	<Navbar.Link label="Photography" link="/photography" />
-	<Navbar.Link label="About" link="/about" />
-	<Navbar.Link label="Resume" link="/resume" />
+	<!-- <Navbar.Link label="About" link="/about" /> -->
+	<!-- <Navbar.Link label="Resume" link="/resume" /> -->
 </Navbar.Root>
 
 <!-- Main content -->
