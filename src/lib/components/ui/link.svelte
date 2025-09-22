@@ -7,7 +7,7 @@
 	let { children, href } : Props = $props();
 	let link: string;
 
-	if (!href.startsWith('/')) {
+	if (!href.startsWith('/') && !href.startsWith('https://')) {
 		link = `https://${href}`;
 	} else {
 		link = href;
