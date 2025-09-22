@@ -16,7 +16,7 @@
 	I might be a bit too curios fella since I seeminly can't stop to get into new intrests.<br>
 	<br>
 
-	Professionally I'm currently working as a Fullstack developer at <Link href="https://zoezi.se">Zoezi</Link>
+	Professionally I'm currently working as a Fullstack developer at <Link href="zoezi.se">Zoezi</Link>
 	<br>
 
 	<!-- On my freetime I enjoy tinkering with my own <Link href="/projects">projects</Link> -->
