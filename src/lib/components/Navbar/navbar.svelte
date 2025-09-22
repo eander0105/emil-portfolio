@@ -5,7 +5,7 @@
 </script>
 
 <header class="sticky top-0 z-50 bg-background">
-	<nav class="mx-auto flex flex-row justify-between border-b px-4 py-6 md:py-4 md:pb-4 max-w-[1680px]">
+	<nav class="mx-auto max-w-[1024px] flex flex-row justify-between border-b px-4 py-6 md:py-4 md:pb-4">
 		<!-- Header - Name, subtitle & Image -->
 		<div class="h- z-40 flex flex-row items-center">
 			<img src="/profile.jpeg" alt="Emil Andersson" class="h-16 w-16 rounded sm:h-20 sm:w-20" />

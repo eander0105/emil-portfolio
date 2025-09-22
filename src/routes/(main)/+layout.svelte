@@ -16,7 +16,7 @@
 
 <!-- Main content -->
 <main class="min-h-screen">
-	<div class="container mx-auto mt-4 px-4 sm:px-16">
+	<div class="container max-w-[1024px] mx-auto mt-4 px-4 sm:px-16">
 		{@render children()}
 	</div>
 </main>
